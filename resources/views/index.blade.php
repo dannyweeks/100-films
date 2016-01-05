@@ -82,7 +82,10 @@
                 <ul class="list">
                     @foreach($toWatch as $unwatchedFilm)
                         <li class="film" data-bg-image="{{ $unwatchedFilm->background_image }}">
-                            {{ $unwatchedFilm->title }} - {{ $unwatchedFilm->date_added }}
+                            {{ $unwatchedFilm->title }}
+                            <small>
+                                ( {!! sprintf('<a href="http://imdb.com/title/%s">IMDB</a>', $unwatchedFilm->imdb_id) !!} )
+                            </small>
                         </li>
                     @endforeach
                 </ul>
