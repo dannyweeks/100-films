@@ -9,6 +9,8 @@ $('.film').hover(function () {
 
 $(document).ready(function () {
     $('#watched-table').DataTable({
+        "iDisplayLength": 100,
+        "bPaginate": false,
         columnDefs: [
             {type: 'anti-the', targets: 0},
             {type: 'date-uk', targets: 1}

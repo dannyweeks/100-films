@@ -14,7 +14,10 @@ class SiteController extends Controller
 {
     public function index()
     {
-        $toWatch = Film::watched(false)->get();
+        $toWatch = Film::watched(false)->get()->sortBy(function($item, $key){
+            return preg_replace("/^[Tt]he\s/", '', $item->title);
+        });
+
         $watched = Film::watched()->orderBy('watched_on')->get();
         $watchedThisYear = Film::watched()->thisYear()->count();
 

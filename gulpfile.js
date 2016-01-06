@@ -14,6 +14,8 @@ elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
     mix.copy('components/foundation/scss', 'resources/assets/sass/vendor/foundation');
+    mix.copy('vendor/components/font-awesome/scss', 'resources/assets/sass/vendor/font-awesome');
+    mix.copy('vendor/components/font-awesome/fonts', 'public/fonts');
     mix.copy('components/modernizr/modernizr.js', 'public/js/modernizr.js');
     mix.sass('app.scss');
     mix.scripts([
