@@ -15,7 +15,7 @@ class CreateFilmsTable extends Migration
         Schema::create('films', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('imdb_id');
+            $table->string('imdb_id')->unique();
             $table->boolean('watched')->default(false);
             $table->date('watched_on')->nullable();
             $table->decimal('hel_score', 8, 1)->nullable();

@@ -104,4 +104,6 @@ return [
         ],
     ],
 
+    'passcode' => env('PASSCODE', 'pass1'),
+
 ];
