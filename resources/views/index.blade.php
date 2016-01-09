@@ -70,7 +70,7 @@
                             <li class="film" data-bg-image="{{ $unwatchedFilm->background_image }}">
                                 {{ $unwatchedFilm->title }}
                                 <small>
-                                    ( {!! sprintf('<a href="http://imdb.com/title/%s">IMDB</a>', $unwatchedFilm->imdb_id) !!} )
+                                    ( <a href="http://imdb.com/title/{{ $unwatchedFilm->imdb_id }}" target="_blank">IMDB</a> )
                                 </small>
                             </li>
 
