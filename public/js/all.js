@@ -16866,6 +16866,7 @@ $(document).ready(function () {
     $('#watched-table').DataTable({
         "iDisplayLength": 100,
         "bPaginate": false,
+        "order": [[ 1, "desc" ]],
         columnDefs: [
             {type: 'anti-the', targets: 0},
             {type: 'date-uk', targets: 1}

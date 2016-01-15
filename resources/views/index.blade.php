@@ -57,6 +57,21 @@
                             </tr>
                         @endforeach
                         </tbody>
+                        <tfoot>
+                            <td></td>
+                            <td class="text-center">
+                                Averages
+                            </td>
+                            <td class="text-center">
+                                {{ $watched->sum('hel_score') / $watched->count() }}
+                            </td>
+                            <td class="text-center">
+                                {{ $watched->sum('dan_score') / $watched->count() }}
+                            </td>
+                            <td class="text-center">
+                                {{ $watched->sum('average_score') / $watched->count() }}
+                            </td>
+                        </tfoot>
                     </table>
                 </div>
             </div>
