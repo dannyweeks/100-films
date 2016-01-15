@@ -63,13 +63,13 @@
                                 Averages
                             </td>
                             <td class="text-center">
-                                {{ $watched->sum('hel_score') / $watched->count() }}
+                                {{ number_format($watched->sum('hel_score') / $watched->count(), 2) }}
                             </td>
                             <td class="text-center">
-                                {{ $watched->sum('dan_score') / $watched->count() }}
+                                {{ number_format($watched->sum('dan_score') / $watched->count(), 2) }}
                             </td>
                             <td class="text-center">
-                                {{ $watched->sum('average_score') / $watched->count() }}
+                                {{ number_format($watched->sum('average_score') / $watched->count(), 2) }}
                             </td>
                         </tfoot>
                     </table>
