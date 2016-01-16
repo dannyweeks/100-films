@@ -12,6 +12,7 @@
     <script src="js/modernizr.js"></script>
 </head>
 <body>
+    <div id="bg"></div>
     <h1 class="text-center">
         <a href="/">
             One Hundred Films, One Year
