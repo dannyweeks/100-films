@@ -15,8 +15,8 @@ $(document).ready(function () {
     var films = $('.film');
 
     var randomFilm = $(films[Math.floor(Math.random()*films.length)]);
-    var initalBg = randomFilm.attr('data-bg-image');
-    $('#old-bg').css({'background-image': 'url(\'' + initalBg + '\')'});
+    var initialBg = randomFilm.attr('data-bg-image');
+    $('#old-bg').css({'background-image': 'url(\'' + initialBg + '\')'});
 });
 
 $('.film').hover(function () {
