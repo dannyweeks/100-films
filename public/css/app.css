@@ -5232,7 +5232,7 @@ table.hover tr:nth-of-type(even):hover {
 
 .tabs-title {
   float: left;
-  width: 50%;
+  width: 33%;
   text-align: center; }
   .tabs-title a {
     font-size: 1.5em; }

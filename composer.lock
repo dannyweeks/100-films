@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46ccfd4c72da0073441947fa5130e8fa",
-    "content-hash": "7a3ec5f6b575ace7ce8f84eefe476a81",
+    "hash": "225069f6b06ee846933bd0feaffd615a",
+    "content-hash": "25ca0afc1c55bce16c337f5d767e6767",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -295,6 +295,50 @@
             "description": "Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.",
             "homepage": "http://necolas.github.com/normalize.css/",
             "time": "2015-05-21 16:25:32"
+        },
+        {
+            "name": "dannyweeks/laravel-base-repository",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dannyweeks/laravel-base-repository.git",
+                "reference": "28297a5ea87ed105b1649703da69a65764072ba5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dannyweeks/laravel-base-repository/zipball/28297a5ea87ed105b1649703da69a65764072ba5",
+                "reference": "28297a5ea87ed105b1649703da69a65764072ba5",
+                "shasum": ""
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Weeks\\Laravel\\Repositories\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Danny Weeks",
+                    "email": "danny@dannyweeks.com",
+                    "homepage": "http://dannyweeks.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An abstract repository class for Laravel's Eloquent ORM.",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "repository"
+            ],
+            "time": "2015-10-23 23:24:44"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

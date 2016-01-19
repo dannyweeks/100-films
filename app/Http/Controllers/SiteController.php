@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\QuickAddRequest;
 use App\Models\Film;
+use App\Repositories\FilmRepository;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -12,16 +13,31 @@ use Tmdb\Repository\MovieRepository;
 
 class SiteController extends Controller
 {
+    /**
+     * @var FilmRepository
+     */
+    private $films;
+
+    /**
+     * @param FilmRepository $films
+     */
+    public function __construct(FilmRepository $films)
+    {
+
+        $this->films = $films;
+    }
+
     public function index()
     {
-        $toWatch = Film::watched(false)->get()->sortBy(function($item, $key){
-            return preg_replace("/^[Tt]he\s/", '', $item->title);
-        });
+        $toWatch = $this->films->getUnWatched();
 
-        $watched = Film::watched()->orderBy('watched_on')->get();
-        $watchedThisYear = Film::watched()->thisYear()->count();
+        $watched = $this->films->getWatched();
+        $watchedThisYear = $this->films->watchedThisYearTotal();
 
-        return view('index', compact('toWatch', 'watched', 'watchedThisYear'));
+        return view('index', compact('toWatch', 'watched', 'watchedThisYear', 'mostControversial'))
+            ->with('mostControversial', $this->films->mostControversial())
+            ->with('mostLoved', $this->films->mostLoved())
+            ->with('mostHated', $this->films->mostHated());
     }
 
     public function quickAdd()

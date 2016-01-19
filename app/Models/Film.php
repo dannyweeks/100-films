@@ -39,6 +39,11 @@ class Film extends Model
         return $this->accessApi('title');
     }
 
+    public function getDescriptionAttribute()
+    {
+        return $this->accessApi('overview');
+    }
+
     public function getImageUrlAttribute()
     {
         return app('Tmdb\Helper\ImageHelper')->getUrl($this->accessApi('poster_path'));
