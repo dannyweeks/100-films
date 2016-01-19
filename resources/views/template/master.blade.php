@@ -13,6 +13,7 @@
 </head>
 <body>
     <div id="bg"></div>
+    <div id="old-bg"></div>
     <h1 class="text-center">
         <a href="/">
             One Hundred Films, One Year

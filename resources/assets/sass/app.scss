@@ -4,16 +4,25 @@
 
 @include foundation-everything;
 
-#bg {
+%bg{
   background-size: cover;
-  background-color: $body-background;
+  background-color: none;
   background-repeat: no-repeat;
   background-attachment:fixed;
   background-position: center 0px;
   position: fixed;
   width: 100%;
   height: 100%;
+}
+
+#bg {
+  @extend %bg;
   z-index: -1;
+}
+
+#old-bg {
+  @extend %bg;
+  z-index: -2;
 }
 
 .list {

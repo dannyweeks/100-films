@@ -5175,16 +5175,21 @@ table.hover tr:nth-of-type(even):hover {
   .top-bar-right {
     float: right; } }
 
-#bg {
+#bg, #old-bg {
   background-size: cover;
-  background-color: #fefefe;
+  background-color: none;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center 0px;
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100%; }
+
+#bg {
   z-index: -1; }
+
+#old-bg {
+  z-index: -2; }
 
 .list {
   color: #555;
