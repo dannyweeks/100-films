@@ -12,6 +12,7 @@
     <script src="js/modernizr.js"></script>
 </head>
 <body>
+    <div id="gradient"></div>
     <div id="bg"></div>
     <div id="old-bg"></div>
     <h1 class="text-center">

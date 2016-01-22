@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="medium-6 medium-centered columns">
-            <h2 class="text-center">
+            <h2 class="text-center text-white">
                 This Year's Total...
             </h2>
             <div class="total">

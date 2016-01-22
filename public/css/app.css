@@ -5175,7 +5175,7 @@ table.hover tr:nth-of-type(even):hover {
   .top-bar-right {
     float: right; } }
 
-#bg, #old-bg {
+#gradient, #bg, #old-bg {
   background-size: cover;
   background-color: none;
   background-repeat: no-repeat;
@@ -5185,11 +5185,21 @@ table.hover tr:nth-of-type(even):hover {
   width: 100%;
   height: 100%; }
 
-#bg {
+#gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0+25 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, black 0%, transparent 25%, transparent 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+  /* IE6-9 */
   z-index: -1; }
 
-#old-bg {
+#bg {
   z-index: -2; }
+
+#old-bg {
+  z-index: -3; }
 
 .list {
   color: #555;
@@ -5248,3 +5258,6 @@ table.hover tr:nth-of-type(even):hover {
 .tabs-content {
   border: none;
   background: none; }
+
+.text-white {
+  color: white; }
