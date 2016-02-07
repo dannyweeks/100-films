@@ -33,11 +33,13 @@ class SiteController extends Controller
 
         $watched = $this->films->getWatched();
         $watchedThisYear = $this->films->watchedThisYearTotal();
+        $mostControversial = $this->films->mostControversial();
 
-        return view('index', compact('toWatch', 'watched', 'watchedThisYear', 'mostControversial'))
-            ->with('mostControversial', $this->films->mostControversial())
+        return view('index', compact('toWatch', 'watched', 'watchedThisYear'))
+            ->with('mostControversial', $mostControversial)
             ->with('mostLoved', $this->films->mostLoved())
-            ->with('mostHated', $this->films->mostHated());
+            ->with('mostHated', $this->films->mostHated())
+            ->with('averageWatchedPerWeek', $this->films->averageWatchedPerWeek());
     }
 
     public function quickAdd()
