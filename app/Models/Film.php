@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Film extends Model
 {
-
     protected $dates = ['watched_on'];
 
     public function accessApi($fetch = null)
@@ -19,6 +18,12 @@ class Film extends Model
         }
 
         return $data;
+    }
+
+    // Relationships
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class);
     }
 
     // Scopes

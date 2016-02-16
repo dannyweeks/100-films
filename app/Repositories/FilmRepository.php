@@ -4,10 +4,13 @@ namespace App\Repositories;
 
 use App\Models\Film;
 use Weeks\Laravel\Repositories\BaseEloquentRepository;
+use Weeks\Laravel\Repositories\CacheResults;
 
 class FilmRepository extends BaseEloquentRepository
 {
     protected $model = Film::class;
+
+    use CacheResults;
 
     public function getUnWatched()
     {
@@ -70,6 +73,6 @@ class FilmRepository extends BaseEloquentRepository
 
         $total = $this->model->watched()->count();
 
-        return $total / floor(\Carbon\Carbon::now()->dayOfYear / 7 + 1);
+        return number_format($total / floor(\Carbon\Carbon::now()->dayOfYear / 7 + 1), 1);
     }
 }

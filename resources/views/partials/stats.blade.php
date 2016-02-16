@@ -16,4 +16,15 @@
             </p>
         </div>
     </div>
+    <div class="column">
+        <div class="callout text-center">
+            <h2>Genre Popularity</h2>
+
+            <table>
+                @foreach($genrePopularity as $genre)
+                    {!! $genre !!}
+                @endforeach
+            </table>
+        </div>
+    </div>
 </div>

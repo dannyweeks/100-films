@@ -10,7 +10,7 @@
         "php-tmdb/laravel": "~1.0",
         "components/foundation": "^6.0",
         "components/font-awesome": "^4.5",
-        "dannyweeks/laravel-base-repository": "^0.1.0"
+        "dannyweeks/laravel-base-repository": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

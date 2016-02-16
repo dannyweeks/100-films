@@ -5191,7 +5191,7 @@ table.hover tr:nth-of-type(even):hover {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, black 0%, transparent 25%, transparent 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
   /* IE6-9 */
   z-index: -1; }
 
